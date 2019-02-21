@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { HttpService } from '../../services/http.service';
 import { Router } from "@angular/router";
 import * as $ from 'jquery';
@@ -47,20 +47,20 @@ export class AdminLoginComponent implements OnInit {
           }),
           contentType: 'application/json; charset=utf-8',
           success: (data: any) => {
-            // console.log(data, 'data is', data['id']);
             localStorage.setItem('admintoken', data['id']);
-            this.router.navigate(['adminDashboard'])
+            this.router.navigate(['dashboard'])
 
           },
           error:(jqXHR, textStatus, errorThrown) =>{
             this.getErrorMessage="unAuthorized User";
-            // console.log('error data ', textStatus);
+             console.log('error data ', textStatus);
           },
 
           timeout: 120000,
         });
       }
+    }catch(err){
+        console.log("Error while login");
     }
-    )
   }
 }

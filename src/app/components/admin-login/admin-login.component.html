@@ -20,18 +20,16 @@
       <div class="row d-flex justify-content-center">
         <form>
           <div class="form-container  input-group-lg ">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail2">Email address</label>
             <input type="email" [formControl]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            <!-- < *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+              placeholder="email">
             <small *ngIf="email.invalid && (email.dirty || email.touched )" class=" alert1 alert alert-danger column d-flex justify-content-center">
               {{emailError()}}</small>
           </div>
 
 
           <div class="form-container input-group-lg">
-            <label for="exampleInputPassword1">Password</label>
+            <label for="exampleInputPassword2">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [formControl]='password'>
           </div>
           <div>
@@ -43,7 +41,7 @@
 
           </div>
           <p class="alert alert-danger d-flex justify-content-center" role="alert">
-            {{getErrorMessageserver}}
+            {{getErrorMessage}}
           </p>
         </form>
       </div>
