@@ -1,3 +1,4 @@
+
 .fundoo{
       
     // margin: auto;
@@ -17,8 +18,28 @@
  .o{
      color:#00cc00;
  }
- .o1{
-     color:#e60000;
- }
  
  }
+ .mainCard{
+    position: relative;
+    margin-top: 60px;
+
+}
+.card{
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.table{
+    table-layout: fixed;
+}
+.tablediv{  
+    border: 2px solid ;
+    
+    overflow-x: hidden;
+  
+}
+
+.tablediv::-webkit-scrollbar{
+    width: 10px;
+}

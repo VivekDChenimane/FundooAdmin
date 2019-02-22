@@ -1,23 +1,62 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <div class="d-flex justify-content-center">
-        <h3 class="fundoo ">
-          <span class="f">F</span>
-          <span class="u">u</span>
-          <span class="n">n</span>
-          <span class="d">d</span>
-          <span class="o">o</span>
-          <span class="o1">o</span>
-          <span class="o1"> &nbsp;</span>
-          <span class="f">A</span>
-          <span class="u">d</span>
-          <span class="n">m</span>
-          <span class="d">i</span>
-          <span class="o">n</span>
-        </h3>
-      </div>
-    </div>
-    <button class="btn btn-danger navbar-btn">Logout</button>
+<nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-dark">
+  <h3 class="fundoo ">
+    <span class="f">A</span>
+    <span class="u">d</span>
+    <span class="n">m</span>
+    <span class="d">i</span>
+    <span class="o">n</span>
+  </h3>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-danger navbar-btn logout" (click)="logout()">Logout</button>
   </div>
 </nav>
+<div class="row text-center justify-content-center mainCard">
+  <div class="col-sm-4 col-lg-3 ">
+    <div class="card text-center  advance">
+      <div class="card-header">
+        <h4>Advance</h4>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{advance}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-lg-3 ">
+    <div class="card basic">
+      <div class="card-header">
+        <h4>Basic</h4>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{basic}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <input type="text" id="myInput" [(value)]="values" (keyup)="onKeyUp($event)" placeholder="Enter the search"
+    title="Type in a name" class="container-fluid">
+  <div class="table-responsive-xl fi tablediv">
+    <table class="table table-hover ">
+      <caption>List of users</caption>
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">LastName</th>
+          <th scope="col">Email</th>
+          <th scope="col">Service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let el of array; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{el.firstName}}</td>
+          <td>{{el.lastName}}</td>
+          <td>{{el.email}}</td>
+          <td>{{el.service}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
