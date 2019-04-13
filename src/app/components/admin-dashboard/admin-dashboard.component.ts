@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from "../../services/http.service";
 import { Router } from "@angular/router";
-declare var $: any;@Component({
+declare var $: any;
+@Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
   styleUrls: ['./admin-dashboard.component.scss']
@@ -9,6 +10,7 @@ declare var $: any;@Component({
 export class AdminDashboardComponent implements OnInit {
   basic = 0; advance = 0;preBasic = 0; preAdvance = 0; char = '';
   array = []; mainArray = []; pre = '';
+  show:boolean=true;
   constructor(private httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
@@ -78,5 +80,9 @@ onKeyUp(event: any) {
   logout() {
     localStorage.clear();
     this.router.navigate(['login'])
+  }
+  acceptance(){
+    this.show=!this.show;
+    // this.router.navigate(['acceptance'])
   }
 }

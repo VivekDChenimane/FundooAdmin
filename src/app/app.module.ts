@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { AcceptanceComponent } from './components/acceptance/acceptance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    AcceptanceComponent
   ],
   imports: [
     BrowserModule,

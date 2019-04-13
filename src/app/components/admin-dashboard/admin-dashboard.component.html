@@ -8,8 +8,15 @@
   </h3>
   <div class="d-flex justify-content-end">
     <button class="btn btn-danger navbar-btn logout" (click)="logout()">Logout</button>
+    <button *ngIf=show class="btn btn-danger navbar-btn logout" (click)="acceptance()">Acceptance</button>
+    <button *ngIf=!show class="btn btn-danger navbar-btn logout" (click)="acceptance()">Home</button>
   </div>
-</nav>
+</nav >
+<div >
+  <div class="acceptance" *ngIf=!show>
+    <app-acceptance></app-acceptance>
+  </div>
+<div *ngIf=show >
 <div class="row text-center justify-content-center mainCard">
   <div class="col-sm-4 col-lg-3 ">
     <div class="card text-center  advance">
@@ -55,8 +62,17 @@
           <td>{{el.email}}</td>
           <td>{{el.service}}</td>
         </tr>
-
       </tbody>
     </table>
   </div>
+</div>
+</div>
+<div >
+  <h3 class="fundoo ">
+    <span class="f">A</span>
+    <span class="u">d</span>
+    <span class="n">m</span>
+    <span class="d">i</span>
+    <span class="o">n</span>
+  </h3></div>
 </div>

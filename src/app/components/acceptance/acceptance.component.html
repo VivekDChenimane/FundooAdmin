@@ -1,0 +1,27 @@
+<h3 class="fundoo ">
+  <span class="f">A</span>
+  <span class="u">d</span>
+  <span class="n">m</span>
+  <span class="d">i</span>
+  <span class="o">n</span>
+</h3>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col-1">S.No.</th>
+        <th scope="col-5">Question</th>
+        <th scope="col-4">Approve</th>
+        <th scope="col-4">Reject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let array of answer let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td innerHtml='{{array.message}}'></td>
+        <td><button type="button" (click)="Approve">Approve</button></td>
+        <td><button type="button" (click)="Reject">Reject</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
